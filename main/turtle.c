@@ -6,6 +6,7 @@ Turtle createTurtle(vector3 position, vector3 direction, double lineWidth, int l
 	turtle->direction = direction;
 	turtle->lineWidth = lineWidth;
 	turtle->lineColorHue = lineColorHue;
+	stackInitialize(&turtle->stateStack);
 	return turtle;
 }
 

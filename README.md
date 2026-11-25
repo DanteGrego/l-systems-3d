@@ -31,7 +31,7 @@ El axioma, las reglas y la cantidad de iteraciones se definen en `main.c`.
 
 ## Compilación (Windows, GCC)
 
-El repositorio incluye raylib 5.5.
+El repositorio incluye raylib 5.5 compilada para 32 bits. Con un GCC de 64 bits, reemplazar `lib` por la carpeta de una raylib de 64 bits.
 
 ```
 gcc main.c main/*.c utils/*.c -o lsystem.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm

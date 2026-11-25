@@ -123,7 +123,7 @@ Operation readOperationInfix(char* operationStr, char* operationVariables){
         if(isdigit(operationStr[i])){//operand inm
             double inm = strtod(operationStr+i, NULL);
             operationAddToken(operation, createNumberToken(inm));
-            while(isdigit(operationStr[i])) i++;
+            while(isdigit(operationStr[i]) || operationStr[i] == '.') i++;
         }else if(isalpha(operationStr[i])){//operand var
             int varPos = strchr(operationVariables, operationStr[i]) - operationVariables;
             operationAddToken(operation, createRelativeVariableToken(varPos));
